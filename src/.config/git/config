@@ -1,0 +1,9 @@
+[core]
+    excludesfile = ~/.config/git/gitignore_global
+
+[user]
+    email = paigr.io@gmail.com
+    name = Paulo Ribeiro
+
+[alias]
+    graph = log --graph --oneline --decorate

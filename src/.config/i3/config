@@ -1,0 +1,107 @@
+# i3 config file (v4)
+set $mod Mod4
+
+# Visuals
+focus_wrapping no
+default_border pixel 3
+default_floating_border normal
+font pango:Noto Sans Mono, Bold SemiCondensed 12
+#title_align centre
+
+# Colors
+set $host "#1378aa"
+
+set_from_resource $bg        i3wm.background #1d1f21
+set_from_resource $black     i3wm.color0     #282a2e
+set_from_resource $red       i3wm.color1     #a54242
+set_from_resource $green     i3wm.color2     #8c9440
+set_from_resource $yellow    i3wm.color3     #de935f
+set_from_resource $blue      i3wm.color4     #5f819d
+set_from_resource $magenta   i3wm.color5     #85678f
+set_from_resource $cyan      i3wm.color6     #5e8d87
+set_from_resource $grey      i3wm.color8     #373b41
+set_from_resource $b_grey    i3wm.color7     #707880
+set_from_resource $b_red     i3wm.color9     #cc6666
+set_from_resource $b_green   i3wm.color10    #b5bd68
+set_from_resource $b_yellow  i3wm.color11    #f0c674
+set_from_resource $b_blue    i3wm.color12    #81a2be
+set_from_resource $b_magenta i3wm.color13    #b294bb
+set_from_resource $b_cyan    i3wm.color14    #8abeb7
+set_from_resource $white     i3wm.color15    #c5c8c6
+
+# Target                Border   BG       Text     Ind.    ChildBorder
+client.focused          $host    $host    $white   $white  $host
+client.focused_inactive $b_grey  $b_grey  $white   $white  $b_grey
+client.unfocused        $grey    $grey    $b_grey  $white  $grey
+client.urgent           $white   $white   $black   $black  $white
+client.background       $bg
+
+bar {
+    status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
+    tray_output none
+    colors {
+        background $bg
+        # Target            Border  BG      Font
+        focused_workspace   $bg     $host   $white
+        inactive_workspace  $bg     $bg     $b_grey
+        urgent_workspace    $white  $white  $bg
+    }
+    font pango:Noto Sans Mono, Bold 12
+}
+
+# Focus
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+1 workspace "1"
+bindsym $mod+2 workspace "2"
+bindsym $mod+3 workspace "3"
+bindsym $mod+4 workspace "4"
+bindsym $mod+5 workspace "5"
+bindsym $mod+6 workspace "6"
+bindsym $mod+7 workspace "7"
+bindsym $mod+8 workspace "8"
+bindsym $mod+9 workspace "9"
+bindsym $mod+0 workspace "10"
+
+# Movement
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+1 move container to workspace "1"
+bindsym $mod+Shift+2 move container to workspace "2"
+bindsym $mod+Shift+3 move container to workspace "3"
+bindsym $mod+Shift+4 move container to workspace "4"
+bindsym $mod+Shift+5 move container to workspace "5"
+bindsym $mod+Shift+6 move container to workspace "6"
+bindsym $mod+Shift+7 move container to workspace "7"
+bindsym $mod+Shift+8 move container to workspace "8"
+bindsym $mod+Shift+9 move container to workspace "9"
+bindsym $mod+Shift+0 move container to workspace "10"
+
+# Layout
+bindsym $mod+s split h
+bindsym $mod+v split v
+bindsym $mod+Tab layout toggle split
+bindsym $mod+Shift+Tab layout toggle tabbed stacking
+
+#bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen toggle
+
+# Shortcuts
+bindsym $mod+d exec dmenu_run -p '$' -i -fn 'Noto Sans Mono:style=SemiCondensed Bold' -nb '#1d1f21' -nf '#c5c8c6' -sb '#1378aa' -sf '#c5c8c6'
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+w exec firefox
+bindsym $mod+e exec pcmanfm
+
+# System
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-msg exit"
