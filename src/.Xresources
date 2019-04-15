@@ -1,3 +1,6 @@
+Xcursor.theme: neutral
+
+! Colors
 *.foreground:   #c5c8c6
 *.background:   #1d1f21
 *.cursorColor:  #c5c8c6
@@ -34,24 +37,20 @@
 *.color7:   #707880
 *.color15:  #c5c8c6
 
-URxvt.font:           xft:Noto Sans Mono:style=SemiCondensed:antialias=true:hinting=true,\
-                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Inconsolata for Powerline:antialias=true:hinting=true,\
-                      xft:Source Code Pro:style=Medium:pixelsize=18:antialias=true:hinting=true
-URxvt.boldFont:       xft:Noto Sans Mono:style=SemiCondensed Bold:antialias=true:hinting=true,\
-                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Inconsolata for Powerline:antialias=true:hinting=true,\
-                      xft:Source Code Pro:style=Medium:pixelsize=18:antialias=true:hinting=true
-URxvt.italicFont:     xft:Noto Sans Mono:italic:style=SemiCondensed:antialias=true:hinting=true,\
-                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Inconsolata for Powerline:antialias=true:hinting=true,\
-                      xft:Source Code Pro:style=Medium:pixelsize=18:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Noto Sans Mono:italic:style=SemiCondensed Bold:antialias=true:hinting=true,\
-                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Inconsolata for Powerline:antialias=true:hinting=true,\
-                      xft:Source Code Pro:style=Medium:pixelsize=18:antialias=true:hinting=true
-
+! Terminal options
 URxvt.scrollBar:      false
 URxvt.urgentOnBell:   true
 
-Xcursor.theme: Neutral
+! Fonts
+URxvt.font:           xft:Noto Sans Mono:style=SemiCondensed:,\
+                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+URxvt.boldFont:       xft:Noto Sans Mono:style=SemiCondensed Bold:,\
+                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+URxvt.italicFont:     xft:Noto Sans Mono:italic:style=SemiCondensed:,\
+                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Noto Sans Mono:italic:style=SemiCondensed Bold:,\
+                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true

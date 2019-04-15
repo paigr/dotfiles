@@ -1,12 +1,11 @@
-# i3 config file (v4)
 set $mod Mod4
+focus_wrapping no
 
 # Visuals
-focus_wrapping no
-default_border pixel 3
+font pango:Noto Sans Mono, SemiCondensed 12
+
+default_border          pixel 3
 default_floating_border normal
-font pango:Noto Sans Mono, Bold SemiCondensed 12
-#title_align centre
 
 # Colors
 set $host "#1378aa"
@@ -46,11 +45,11 @@ bar {
         inactive_workspace  $bg     $bg     $b_grey
         urgent_workspace    $white  $white  $bg
     }
-    font pango:Noto Sans Mono, Bold 12
+    font pango:Noto Sans Mono, 12
 }
 
 # Focus
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space       focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+h focus left
@@ -87,19 +86,19 @@ bindsym $mod+Shift+9 move container to workspace "9"
 bindsym $mod+Shift+0 move container to workspace "10"
 
 # Layout
-bindsym $mod+s split h
-bindsym $mod+v split v
-bindsym $mod+Tab layout toggle split
+bindsym $mod+s         split h
+bindsym $mod+v         split v
+bindsym $mod+Tab       layout toggle split
 bindsym $mod+Shift+Tab layout toggle tabbed stacking
-
-#bindsym $mod+e layout toggle split
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f         fullscreen toggle
 
 # Shortcuts
-bindsym $mod+d exec dmenu_run -p '$' -i -fn 'Noto Sans Mono:style=SemiCondensed Bold' -nb '#1d1f21' -nf '#c5c8c6' -sb '#1378aa' -sf '#c5c8c6'
-bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+w exec firefox
-bindsym $mod+e exec pcmanfm
+bindsym $mod+d            exec dmenu_run -p "$" -i -fn "Noto Sans Mono:style=SemiCondensed 12" -nb "#1d1f21" -nf "#c5c8c6" -sb "#1378aa" -sf "#c5c8c6"
+bindsym $mod+Return       exec --no-startup-id urxvt
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -e tmux new
+bindsym $mod+w            exec firefox
+bindsym $mod+e            exec pcmanfm
+bindsym $mod+r            exec --no-startup-id urxvt -e ranger
 
 # System
 bindsym $mod+Shift+q kill

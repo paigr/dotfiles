@@ -35,37 +35,33 @@ export EDITOR='vim'
 export PATH="$PATH:$HOME/bin"
 
 # Aliases
-alias ls='ls -Sp --color=auto --group-directories-first'
-alias ll='ls -lh'
-alias la='ll -A'
-alias lr='ls -r'
 alias cat='vimcat'
-alias grep='grep --color=auto'
-alias df='df -h | grep -v tmpfs'
+alias clip='xclip -i -selection clipboard'
+alias df='df -h --exclude=tmpfs'
 alias du='du -h'
+alias feh='feh -.'
+alias grep='grep --color=auto'
+alias grepi='grep -i'
+alias la='ll -A'
+alias less='less --color=auto'
+alias ll='ls -lh'
+alias lr='ls -r'
+alias ls='ls -Sp --color=auto --group-directories-first'
 alias mkdir='mkdir -pv'
 alias mv='mv -iv'
-alias rm='mkdir -p /tmp/trash; mv -ft /tmp/trash'
-alias feh='feh -.'
-alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
-alias clip='xclip -i -selection clipboard'
-alias watch='watch -n1'
 alias python='docker run --rm -it python:3.6 python'
+alias reboot='sudo reboot'
+alias rm='mkdir -p /tmp/trash; mv -ft /tmp/trash'
+alias tar='tar -v -f'
+alias tarc='tar -c'
+alias tart='tar -t'
+alias tarx='tar -x'
+alias watch='watch -c -n1'
+alias watchd='watch -d'
 
-# Utility functions
 mkcd() {
-    mkdir $1; cd $1
-}
-
-roll() {
-    if [ $# -eq 1 ]; then
-        echo $(( ( RANDOM % $1 ) + 1 ))
-    elif [ $# -eq 2 ]; then
-        echo $(( ( RANDOM % $(( $2 - $1 + 1 )) ) + $1 ))
-    else
-        echo 'Usage: roll [MIN] MAX'
-    fi
+    mkdir -p $1 && cd $1
 }
 
 # Command prompt
