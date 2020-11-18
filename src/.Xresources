@@ -42,15 +42,54 @@ URxvt.scrollBar:      false
 URxvt.urgentOnBell:   true
 
 ! Fonts
-URxvt.font:           xft:Noto Sans Mono:style=SemiCondensed:,\
+!URxvt.font:           xft:Noto Sans Mono:style=SemiCondensed:size=10,\
+!                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+!                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldFont:       xft:Noto Sans Mono:style=SemiCondensed Bold:size=10,\
+!                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+!                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.italicFont:     xft:Noto Sans Mono:italic:style=SemiCondensed:size=10,\
+!                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+!                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Noto Sans Mono:italic:style=SemiCondensed Bold:size=10,\
+!                      xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
+!                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+! Fonts
+URxvt.font:           xft:Noto Sans Mono:style=SemiCondensed:size=10,\
                       xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
-URxvt.boldFont:       xft:Noto Sans Mono:style=SemiCondensed Bold:,\
+                      xft:Inconsolata for Powerline:size=13,\
+                      xft:Source Code Pro:style=Medium:pixelsize=13
+URxvt.boldFont:       xft:Noto Sans Mono:style=SemiCondensed Bold:size=10,\
                       xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
-URxvt.italicFont:     xft:Noto Sans Mono:italic:style=SemiCondensed:,\
+                      xft:Inconsolata for Powerline:size=13,\
+                      xft:Source Code Pro:style=Medium:pixelsize=13
+URxvt.italicFont:     xft:Noto Sans Mono:italic:style=SemiCondensed:size=10,\
                       xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Noto Sans Mono:italic:style=SemiCondensed Bold:,\
+                      xft:Inconsolata for Powerline:size=13,\
+                      xft:Source Code Pro:style=Medium:pixelsize=13
+URxvt.boldItalicFont: xft:Noto Sans Mono:italic:style=SemiCondensed Bold:size=10,\
                       xft:Noto Sans Symbols2:style=Regular:pixelsize=12,\
-                      xft:Noto Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+                      xft:Inconsolata for Powerline:size=13,\
+                      xft:Source Code Pro:style=Medium:pixelsize=13
+
+!URxvt.keysym.C-Up:     font-size:increase
+!URxvt.keysym.C-Down:   font-size:decrease
+!URxvt.keysym.C-S-Up:   font-size:incglobal
+!URxvt.keysym.C-S-Down: font-size:decglobal
+!URxvt.keysym.C-equal:  font-size:reset
+!URxvt.keysym.C-slash:  font-size:show
+!
+!! Terminal settings
+!URxvt*borderless:       1
+!URxvt*buffered:         true
+!URxvt*cursorBlink:      true
+!URxvt*depth:            32
+!URxvt*loginShell:       false
+!URxvt*saveLines:        5000
+!URxvt*underlineColor:   blue
+!URxvt.matcher.button:   1
+!URxvt.perl-ext-common:  default,matcher,font-size
+!URxvt.scrollBar:        false
+!URxvt.urgentOnBell:     true
+!URxvt.urlLauncher:      firefox
+!Urxvt*secondaryScroll:  true

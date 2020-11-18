@@ -1,4 +1,6 @@
-set $mod Mod4
+set $mod    Mod4
+set $altmod Mod1
+
 focus_wrapping no
 
 # Visuals
@@ -102,5 +104,6 @@ bindsym $mod+r            exec --no-startup-id urxvt -e ranger
 
 # System
 bindsym $mod+Shift+q kill
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+w exec i3lock -c 1d1f21 -i /home/paulo/.wallpaper
 bindsym $mod+Shift+e exec "i3-msg exit"
+bindsym $mod+Shift+r restart

@@ -1,0 +1,28 @@
+{
+    "segments": {
+        "above": [
+            {
+                "left": [
+                    {
+                        "function": "powerline.segments.common.env.user"
+                    },
+                    {
+                        "function": "powerline.segments.shell.cwd"
+                    },
+                    {
+                        "function": "powerline.segments.common.vcs.branch"
+                    }
+                ]
+            }
+        ],
+        "left": [
+			{
+				"function": "powerline.segments.shell.mode"
+			},
+			{
+				"function": "powerline.segments.shell.last_pipe_status",
+				"priority": 10
+			}
+        ]
+    }
+}
