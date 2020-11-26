@@ -1,0 +1,43 @@
+format = """
+$cmd_duration\
+$status\
+$line_break\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$kubernetes\
+$line_break\
+$jobs\
+$character\
+"""
+
+[cmd_duration]
+min_time = 2
+show_milliseconds = true
+
+[hostname]
+ssh_only = false
+style = "yellow"
+
+[directory]
+format = "[$path]($style) "
+style = "bright-blue"
+
+[kubernetes]
+disabled = false
+
+[username]
+show_always = true
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
+
+[status]
+disabled = false
+format = "exit [$status]($style) "
+
+[jobs]
+format = "[$symbol]($style) "
